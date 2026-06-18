@@ -1,3 +1,46 @@
+# BPSC Tech Laravel Portal Setup Guide (For Another PC)
+
+Since this repository already contains the configured `.env` and SQLite database (`database/database.sqlite`), setting up this project on another computer is extremely simple.
+
+## Prerequisites
+Ensure the target PC has:
+1. **PHP** (v8.2 or higher)
+2. **Composer** (PHP package manager)
+3. **Node.js & npm** (for frontend asset compilation)
+4. **Git**
+
+## Setup Steps
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/prashantkumarpandit/php-bpsc.git
+   cd php-bpsc
+   ```
+
+2. **Install PHP dependencies:**
+   ```bash
+   composer install
+   ```
+
+3. **Install & Compile frontend assets:**
+   ```bash
+   npm install
+   npm run build
+   ```
+
+4. **Create storage link (for uploaded profile pictures):**
+   ```bash
+   php artisan storage:link
+   ```
+
+5. **Start the local server:**
+   ```bash
+   php artisan serve
+   ```
+   Now visit `http://127.0.0.1:8000` in your web browser.
+
+---
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
